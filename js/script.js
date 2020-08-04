@@ -7,7 +7,7 @@ var etaUtente = parseInt(prompt("Per favore, inserisci la tua età"));
   // Sconto 20% per i minorenni
   // Sconto 40% per gli over 65
 var costoKm = 0.21;
-var costo = costoKm * kmUtente;
+var costo = (costoKm * kmUtente).toFixed(2);
 
 if (etaUtente < 18) {
   var sconto = 0.2;
@@ -19,6 +19,7 @@ if (etaUtente < 18) {
 
 var costoTotale = (costo - costo * sconto).toFixed(2);
 
+// 4. Stampiamo a schermo il risultato
 document.getElementById('km').innerHTML = kmUtente;
 document.getElementById('eta').innerHTML = etaUtente;
 document.getElementById('prezzo').innerHTML = costo;
